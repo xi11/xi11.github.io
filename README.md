@@ -1,7 +1,7 @@
 # Xiaoxi Pan
 Room 516, Equerre 1, Ecole Centrale de Marseille, France
 ## Education Background
-### __Ecole Centrale de Marseille__ `2016.10 - Present`
+### __Ecole Centrale de Marseille__   _Marseille, France_ `2016.10 - Present`
 ```
 Marseille, France
 ```
