@@ -1,33 +1,27 @@
 # Xiaoxi Pan
 Room 516, Equerre 1, Ecole Centrale de Marseille, France
 ## Education Background
-### __Ecole Centrale de Marseille__   _Marseille, France_ `2016.10 - Present`
+### __Ecole Centrale de Marseille__   `2016.10 - Present`
 - Ph.D. Optics, Photonics and Image Processing
 - Thesis: Towards FDG-PET image Characterization and Classification: Application to Alzheimer’s Disease
 Computer-aided Diagnosis
 - Supervisors: Mouloud Adel, Caroline Fossati
 
 ### __Beihang University__ `2013.09 - 2016.01`
-```
-Beijing, China
-```
 - M.E. in Astronautics Engineering (Pattern Recognition & Intelligent System)
 - Thesis: Haze Assessment and Haze Removal for Remote Sensing Images
 - Supervisors: Fengying Xie
 
 ### __Northwestern Polytechnical University__ `2009.09 - 2013.07`
-```
-Xi'an, China
-```
 - B.E. in Guidance, Navigation and Control Technology
 
 ## Research Interest
-
-
+Machine learning, deep learning, medical image analysis, computer-aided diagnosis
 
 ## Research Experiences
-
-
+#### _Multi-scale multi-view CNN for Alzheimer’s Disease diagnosis_   `2016.10 - Present`
+- Propose to learn features from different views of FDG-PET brain images, in which 3D CNN is equipped with cubo¨ıd kernels.
+- Code is implemented with Python.
 
 ## Publications
 
