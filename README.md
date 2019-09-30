@@ -19,18 +19,34 @@ Computer-aided Diagnosis
 Machine learning, deep learning, medical image analysis, computer-aided diagnosis
 
 ## Research Experiences
-#### _Multi-scale multi-view CNN for Alzheimer’s Disease diagnosis_   `2016.10 - Present`
+#### _Multi-scale multi-view CNN for Alzheimer’s Disease diagnosis_   `2019.03 - 2019.12`
 - Propose to learn features from different views of FDG-PET brain images, in which 3D CNN is equipped with cubo¨ıd kernels.
 - Code is implemented with Python.
+
+#### _Multi-scale gradients for Alzheimer’s Disease diagnosis_  `2018.01 - 2019.02`
+- Extend the feature pool that is commonly used for characterizing FDG-PET images from the gradient point of view, which is effective yet simple.
+- Code is implemented with Matlab and the work is published at __Computer Methods and Programs in Biomedicine__ and ICFSP 2019.
+
+#### _Multi-level features for Alzheimer’s Disease diagnosis_  `2016.10 - 2017.12`
+- Propose to represent FDG-PET images via multi-level features in a hierarchical manner, which considers individual region’s property as well as connections among regions.
+- Code is implemented with Matlab and the work is published at __IEEE Journal of Biomedical and Health Informatics__ and ICIP 2018.
+
+### _Image Dehazing_ `2013.09 - 2016.01`
+- Propose to remove haze from remote sensing images following the idea of dark channel prior based on the haze imaging model.
+- Code is implemented with Matlab and these works are published at __IEEE Access__, __IEEE Geoscience and Remote Sensing Letters__ and __IEEE Signal Processing Letters__.
+
 
 ## Publications
 
 
 ## Awards and Honors
-
-You can use the [editor on GitHub](https://github.com/xi11/xi11.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+- 2016 Outstanding Research Paper Award, Beihang University;
+- 2016 Outstanding Master’s Thesis Award, School of Astronautics, Beihang University;
+- 2015 Outstanding Research Paper Award, Beihang University;
+- 2015 National Scholarship (the highest national wide scholarship for master students in China);
+- 2012 Second Scholarship, Northwestern Polytechnical University (Top 20%);
+- 2011 Second Scholarship, Northwestern Polytechnical University (Top 20%);
+- 2010 First Scholarship, Northwestern Polytechnical University (Top 10%).
 
 ### Markdown
 
