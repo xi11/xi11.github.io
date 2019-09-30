@@ -38,11 +38,11 @@ Machine learning, deep learning, medical image analysis, computer-aided diagnosi
 
 ## Publications
 ##### Journal Papers
-[j5] Xiaoxi Pan, Mouloud Adel, Caroline Fossati, Thierry Gaidon, Julien Wojak, Eric Guedj. "Multiscale Spatial Gradient Features for 18F-FDG PET Image-Guided Diagnosis of Alzheimer’s Disease," _Computer Methods and Programs in Biomedicine_, vol. 18, pp. 105027, 2019.
-[j4] Xiaoxi Pan, Mouloud Adel, Caroline Fossati, Thierry Gaidon, Eric Guedj. "Multilevel Feature Representation of FDG-PET Brain Images for Diagnosing Alzheimer’s Disease," _IEEE Journal of Biomedical and Health Informatics_, vol. 23, no. 4, pp. 1499-1506, 2019.
-[j3] Fengying Xie, Jiajie Chen, Xiaoxi Pan∗, Zhiguo Jiang. "Adaptive Haze Removal for Single Remote Sensing Image," _IEEE Access_, vol. 6, pp. 67982-67991, 2018 (∗Corresponding author).
-[j2] Xiaoxi Pan, Fengying Xie, Zhiguo Jiang, Zhenwei Shi, Xiaoyan Luo. "No-reference Assessment on Haze for Remote-sensing Images," _IEEE Geoscience and Remote Sensing Letters_, vol. 13, no. 12, pp. 1855-1859, 2016.
-[j1] Xiaoxi Pan, Fengying Xie, Zhiguo Jiang, Jihao Yin. "Haze Removal for a Single Remote Sensing Image Based on Deformed Haze Imaging Model," _IEEE Signal Processing Letters_, vol. 22, no. 10, pp. 1806-1810, 2015.
+5. Xiaoxi Pan, Mouloud Adel, Caroline Fossati, Thierry Gaidon, Julien Wojak, Eric Guedj. "Multiscale Spatial Gradient Features for 18F-FDG PET Image-Guided Diagnosis of Alzheimer’s Disease," _Computer Methods and Programs in Biomedicine_, vol. 18, pp. 105027, 2019.
+4. Xiaoxi Pan, Mouloud Adel, Caroline Fossati, Thierry Gaidon, Eric Guedj. "Multilevel Feature Representation of FDG-PET Brain Images for Diagnosing Alzheimer’s Disease," _IEEE Journal of Biomedical and Health Informatics_, vol. 23, no. 4, pp. 1499-1506, 2019.
+3. Fengying Xie, Jiajie Chen, Xiaoxi Pan∗, Zhiguo Jiang. "Adaptive Haze Removal for Single Remote Sensing Image," _IEEE Access_, vol. 6, pp. 67982-67991, 2018 (∗Corresponding author).
+2. Xiaoxi Pan, Fengying Xie, Zhiguo Jiang, Zhenwei Shi, Xiaoyan Luo. "No-reference Assessment on Haze for Remote-sensing Images," _IEEE Geoscience and Remote Sensing Letters_, vol. 13, no. 12, pp. 1855-1859, 2016.
+1. Xiaoxi Pan, Fengying Xie, Zhiguo Jiang, Jihao Yin. "Haze Removal for a Single Remote Sensing Image Based on Deformed Haze Imaging Model," _IEEE Signal Processing Letters_, vol. 22, no. 10, pp. 1806-1810, 2015.
 
 ##### Conference Papers
 [c2] Xiaoxi Pan, Mouloud Adel, Caroline Fossati, Thierry Gaidon, Julien Wojak, Eric Guedj. "First and Second Order Gradients for Alzheimer’s Disease Diagnosis," 5th International Conference on Frontiers of Signal Processing (ICFSP), 2019. (Excellent oral presentation)
