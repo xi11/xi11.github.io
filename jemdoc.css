@@ -14,7 +14,7 @@ body {
          padding-right: 30px;
          padding-top: 10px;
          padding-bottom: 10px;
-         width: 1000px;
+         width: 900px;
 }
 
 #layout-menu {
@@ -24,7 +24,7 @@ body {
 	padding-left: 8px;
 	padding-right: 8px;
 	font-size: 1.0em;
-	width: auto;
+	width: 900px;
 	white-space: nowrap;
        text-align: left;
        vertical-align: top;
