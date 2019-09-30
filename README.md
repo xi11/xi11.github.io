@@ -19,7 +19,7 @@ Computer-aided Diagnosis
 Machine learning, deep learning, medical image analysis, computer-aided diagnosis
 
 ## Research Experiences
-#### _Multi-scale multi-view CNN for Alzheimer’s Disease diagnosis_   `2019.03 - 2019.12`
+#### _Multi-scale multi-view CNN for Alzheimer’s Disease diagnosis_  `2019.03 - 2019.12`
 - Propose to learn features from different views of FDG-PET brain images, in which 3D CNN is equipped with cubo¨ıd kernels.
 - Code is implemented with Python.
 
@@ -31,7 +31,7 @@ Machine learning, deep learning, medical image analysis, computer-aided diagnosi
 - Propose to represent FDG-PET images via multi-level features in a hierarchical manner, which considers individual region’s property as well as connections among regions.
 - Code is implemented with Matlab and the work is published at __IEEE Journal of Biomedical and Health Informatics__ and ICIP 2018.
 
-### _Image Dehazing_ `2013.09 - 2016.01`
+#### _Image Dehazing_ `2013.09 - 2016.01`
 - Propose to remove haze from remote sensing images following the idea of dark channel prior based on the haze imaging model.
 - Code is implemented with Matlab and these works are published at __IEEE Access__, __IEEE Geoscience and Remote Sensing Letters__ and __IEEE Signal Processing Letters__.
 
@@ -48,34 +48,3 @@ Machine learning, deep learning, medical image analysis, computer-aided diagnosi
 - 2011 Second Scholarship, Northwestern Polytechnical University (Top 20%);
 - 2010 First Scholarship, Northwestern Polytechnical University (Top 10%).
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/xi11/xi11.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
