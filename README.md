@@ -1,24 +1,24 @@
 # Xiaoxi Pan
 Room 516, Equerre 1, Ecole Centrale de Marseille, France
-## Education Background
-### __Ecole Centrale de Marseille__   `2016.10 - Present`
+### Education Background
+#### __Ecole Centrale de Marseille__   `2016.10 - Present`
 - Ph.D. Optics, Photonics and Image Processing
 - Thesis: Towards FDG-PET image Characterization and Classification: Application to Alzheimer’s Disease
 Computer-aided Diagnosis
 - Supervisors: Mouloud Adel, Caroline Fossati
 
-### __Beihang University__ `2013.09 - 2016.01`
+#### __Beihang University__ `2013.09 - 2016.01`
 - M.E. in Astronautics Engineering (Pattern Recognition & Intelligent System)
 - Thesis: Haze Assessment and Haze Removal for Remote Sensing Images
 - Supervisors: Fengying Xie
 
-### __Northwestern Polytechnical University__ `2009.09 - 2013.07`
+#### __Northwestern Polytechnical University__ `2009.09 - 2013.07`
 - B.E. in Guidance, Navigation and Control Technology
 
-## Research Interest
+### Research Interest
 Machine learning, deep learning, medical image analysis, computer-aided diagnosis
 
-## Research Experiences
+### Research Experiences
 #### _Multi-scale multi-view CNN for Alzheimer’s Disease diagnosis_  `2019.03 - 2019.12`
 - Propose to learn features from different views of FDG-PET brain images, in which 3D CNN is equipped with cubo¨ıd kernels.
 - Code is implemented with Python.
@@ -36,7 +36,7 @@ Machine learning, deep learning, medical image analysis, computer-aided diagnosi
 - Code is implemented with Matlab and these works are published at __IEEE Access__, __IEEE Geoscience and Remote Sensing Letters__ and __IEEE Signal Processing Letters__.
 
 
-## Publications
+### Publications
 ##### Journal Papers
 1. Xiaoxi Pan, Mouloud Adel, Caroline Fossati, Thierry Gaidon, Julien Wojak, Eric Guedj. "Multiscale Spatial Gradient Features for 18F-FDG PET Image-Guided Diagnosis of Alzheimer’s Disease," _Computer Methods and Programs in Biomedicine_, vol. 18, pp. 105027, 2019.
 2. Xiaoxi Pan, Mouloud Adel, Caroline Fossati, Thierry Gaidon, Eric Guedj. "Multilevel Feature Representation of FDG-PET Brain Images for Diagnosing Alzheimer’s Disease," _IEEE Journal of Biomedical and Health Informatics_, vol. 23, no. 4, pp. 1499-1506, 2019.
@@ -51,7 +51,7 @@ Machine learning, deep learning, medical image analysis, computer-aided diagnosi
 #### Book Chapters
 1. Mouloud Adel, Imene Garali, Xiaoxi Pan, Caroline Fossati, Thierry Gaidon, Julien Wojak, Salah Bourennane, Eric Guedj. "Alzheimer’s Disease Computer-Aided Diagnosis on Positron Emission Tomography Brain Images Using Image Processing Techniques," Computer Methods and Programs in Biomedical Signal and Image Processing, DOI: 10.5772/intechopen.86114, 2019.
 
-## Awards and Honors
+### Awards and Honors
 - 2016 Outstanding Research Paper Award, Beihang University;
 - 2016 Outstanding Master’s Thesis Award, School of Astronautics, Beihang University;
 - 2015 Outstanding Research Paper Award, Beihang University;
