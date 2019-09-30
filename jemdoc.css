@@ -17,7 +17,7 @@ body {
          padding-right: 50px;
          padding-top: 10px;
          padding-bottom: 30px;
-         max-width: 960px;
+         width: 1000px;
 }
 
 #layout-menu {
@@ -29,8 +29,8 @@ body {
 	font-size: 1.0em;
 	width: auto;
 	white-space: nowrap;
-    text-align: left;
-    vertical-align: top;
+       text-align: left;
+       vertical-align: top;
 }
 
 #layout-menu td {
