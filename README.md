@@ -2,9 +2,6 @@
 Room 516, Equerre 1, Ecole Centrale de Marseille, France
 ## Education Background
 ### __Ecole Centrale de Marseille__   _Marseille, France_ `2016.10 - Present`
-```
-Marseille, France
-```
 - Ph.D. Optics, Photonics and Image Processing
 - Thesis: Towards FDG-PET image Characterization and Classification: Application to Alzheimer’s Disease
 Computer-aided Diagnosis
