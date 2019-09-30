@@ -9,8 +9,15 @@ table#tlayout {
 body {
 	background: white;
 	font-family: Georgia, serif;
-	padding-bottom: 8px;
-	margin: 0;
+	  margin-top: 30px; 
+          margin-bottom: 30px;
+          margin-left: auto;
+          margin-right: auto;
+          padding-left:  50px;
+         padding-right: 50px;
+         padding-top: 10px;
+         padding-bottom: 30px;
+         max-width: 960px;
 }
 
 #layout-menu {
@@ -92,7 +99,7 @@ div.menu-item {
 div#toptitle {
 	padding-bottom: 0.2em;
 	margin-bottom: 1.5em;
-	border-bottom: 3px double gray;
+	/*border-bottom: 3px double gray;*/
 }
 
 /* Reduce space if we begin the page with a title. */
