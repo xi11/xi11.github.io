@@ -1,21 +1,26 @@
-## Xiaoxi Pan
+# Xiaoxi Pan
 Room 516, Equerre 1, Ecole Centrale de Marseille, France
-### Education Background
+## Education Background
+### __Ecole Centrale de Marseille__ `2016.10 - Present`
+```
+New York, NY
+```
+- B.S. in Computer Science
+- Major GPA: __4.0__, Cumulative GPA: __3.97__
+- Vision, Graphics track
+
+## Research Interest
 
 
 
-### Research Interest
+## Research Experiences
 
 
 
-### Research Experiences
+## Publications
 
 
-
-### Publications
-
-
-### Awards and Honors
+## Awards and Honors
 
 You can use the [editor on GitHub](https://github.com/xi11/xi11.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
