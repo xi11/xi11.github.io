@@ -1,7 +1,7 @@
 # Xiaoxi Pan
 Room 516, Equerre 1, Ecole Centrale de Marseille, France
 ### Education Background
-#### __Ecole Centrale de Marseille__   <p align="right">`2016.10 - Present`</p>
+#### __Ecole Centrale de Marseille__   <p align="right">2016.10 - Present</p>
 - Ph.D. Optics, Photonics and Image Processing
 - Thesis: Towards FDG-PET image Characterization and Classification: Application to Alzheimer’s Disease
 Computer-aided Diagnosis
