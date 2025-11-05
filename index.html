@@ -2,215 +2,220 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Xiaoxi Pan | Computational Pathology & AI</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Xiaoxi Pan — Computational Pathology, Medical Image Analysis, and Multi-omics Integration." />
+  <title>Xiaoxi Pan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Xiaoxi Pan — Computational Pathology, Medical Image Analysis, Spatial Omics." />
   <link rel="icon" href="data:,">
   <style>
+    /* ===== Base (Qi Dou–style: simple, clean, fixed width) ===== */
     :root{
-      --bg:#ffffff;
-      --ink:#1b1b1b;
-      --muted:#5b5b5b;
-      --line:#e9ebee;
-      --chip:#f6f8fb;
-      --accent:#0f6fff;
-      --maxw:1200px;
-      --sidebar:310px;
+      --ink:#222;
+      --muted:#666;
+      --link:#1772d0;   
+      --line:#e5e5e5;
+      --maxw:960px;
+      --leftw:260px;
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
-    a{color:var(--accent);text-decoration:none}
+    body{margin:0;color:var(--ink);background:#fff;font:16px/1.7 Georgia,"Times New Roman",Times,serif}
+    a{color:var(--link);text-decoration:none}
     a:hover{text-decoration:underline}
-    /* Split banner */
+    img{max-width:100%;height:auto;display:block}
+    .container{max-width:var(--maxw);margin:0 auto;padding:0 12px}
+
+    /* ===== Full-bleed split banners: half + half ===== */
     .banner-top,.banner-bottom{
-      width:100%;height:180px;background:url('./pic/banner.jpg') center/cover no-repeat;filter:saturate(105%)
+      width:100vw; position:relative; left:50%; right:50%;
+      margin-left:-50vw; margin-right:-50vw;
+      background:url('./pic/banner.jpg') center/cover no-repeat;
+      display:block; filter:saturate(105%);
     }
-    .banner-top{background-position:center top;border-bottom:1px solid var(--line)}
-    .banner-bottom{background-position:center bottom;border-top:1px solid var(--line);margin-top:40px}
-    /* Page layout */
-    .wrap{max-width:var(--maxw);margin:0 auto;padding:24px 18px}
-    .grid{display:grid;grid-template-columns:var(--sidebar) 1fr;gap:28px}
-    @media (max-width:980px){
-      :root{--sidebar:100%}
-      .grid{grid-template-columns:1fr}
-      .sidebar{position:static;top:auto}
-    }
-    /* Sidebar (CUHK-style) */
-    .sidebar{
-      position:sticky; top:12px; align-self:start;
-      border:1px solid var(--line); border-radius:16px; background:#fff; padding:18px;
-    }
-    .photo{width:180px;height:180px;border-radius:6px;overflow:hidden;margin:4px auto 14px auto;box-shadow:0 0 0 1px var(--line)}
-    .photo img{width:100%;height:100%;object-fit:cover}
-    .name{font-size:26px;font-weight:700;margin:0;text-align:center}
-    .role{color:var(--muted);text-align:center;margin:6px 0 10px 0}
-    .contact{display:flex;flex-direction:column;gap:8px;margin-top:8px}
-    .chip{display:flex;align-items:center;gap:8px;background:var(--chip);border:1px solid var(--line);padding:8px 10px;border-radius:10px;font-size:14px}
-    .smallmuted{font-size:13px;color:var(--muted);text-align:center;margin-top:10px}
-    .side-section{margin-top:16px}
-    .side-title{font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:#333;margin:0 0 8px 0}
-    .side-links{display:flex;flex-direction:column;gap:6px}
-    /* Main content */
-    main section{padding:14px 0 22px;border-bottom:1px solid var(--line)}
-    main section:last-of-type{border-bottom:none}
-    h2{font-size:22px;margin:0 0 6px 0}
-    .muted{color:var(--muted)}
-    ul.clean{list-style:none;margin:0;padding:0}
-    ul.clean li{margin:10px 0}
-    .pub li{margin:12px 0}
-    .time{font-size:14px;color:var(--muted)}
+    .banner-top{height:50vh; background-position:center top; border-bottom:1px solid var(--line);}
+    .banner-bottom{height:50vh; background-position:center bottom; border-top:1px solid var(--line); margin-top:28px;}
+
+    /* ===== Two-column layout ===== */
+    .wrap{padding:22px 0}
+    .grid{display:grid; grid-template-columns:var(--leftw) 1fr; gap:24px;}
+    @media (max-width: 860px){ .grid{grid-template-columns:1fr} }
+
+    /* ===== Left column (sidebar) ===== */
+    .left{padding-top:6px}
+    .name{font-size:24px;font-weight:bold;margin:6px 0 4px}
+    .affil{color:var(--muted);margin:0 0 10px}
+    .photo{width:240px;height:auto;border:1px solid var(--line)}
+    .left a{word-break:break-word}
+    .left .line{border-top:1px solid var(--line);margin:12px 0}
+    .left .block{margin:10px 0}
+    .label{font-weight:bold}
+
+    /* ===== Right column (content) ===== */
+    h2{font-size:20px;margin:0 0 6px;padding-top:6px}
+    .section{padding:8px 0 16px;border-bottom:1px solid var(--line)}
+    .section:last-of-type{border-bottom:none}
+    ul.clean{list-style:none;padding:0;margin:0}
+    ul.clean li{margin:8px 0}
+    .time{color:var(--muted);font-size:14px}
     .where{color:var(--muted)}
-    .tag{display:inline-block;background:#eef4ff;border:1px solid #dfe9ff;color:#1240aa;padding:1px 8px;border-radius:999px;font-size:12px;margin-left:6px}
-    .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+    .muted{color:var(--muted)}
     .foot{color:var(--muted);font-size:13px;margin-top:8px}
-    /* In-page nav (anchors) */
-    .toc{display:flex;flex-wrap:wrap;gap:10px;margin:8px 0 6px}
-    .toc a{color:var(--ink);padding:6px 10px;border-radius:8px;border:1px solid var(--line);background:#fff}
-    .toc a:hover{background:var(--chip)}
+
+    /* Optional: on very short screens, reduce banner heights a bit */
+    @media (max-height:700px){
+      .banner-top,.banner-bottom{height:40vh}
+    }
   </style>
 </head>
 <body>
+
+  <!-- Full-width top banner (half viewport) -->
   <div class="banner-top" aria-hidden="true"></div>
 
-  <div class="wrap grid">
-    <!-- Sidebar -->
-    <aside class="sidebar">
-      <div class="photo"><img src="./pic/XiaoxiPan.jpg" alt="Photo of Xiaoxi Pan"></div>
-      <h1 class="name">Xiaoxi Pan, Ph.D.</h1>
-      <p class="role">Principal Data Scientist<br>MD Anderson Cancer Center</p>
-
-      <div class="contact">
-        <a class="chip" href="mailto:xpan7@mdanderson.org">✉️ &nbsp;<span class="mono">xpan7@mdanderson.org</span></a>
-        <a class="chip" href="https://github.com/xi11" target="_blank" rel="noopener">💻 &nbsp;github.com/xi11</a>
-        <div class="chip">📍 &nbsp;Houston, TX</div>
-      </div>
-
-      <div class="side-section">
-        <h3 class="side-title">Navigate</h3>
-        <div class="side-links">
-          <a href="#about">About</a>
-          <a href="#news">News</a>
-          <a href="#positions">Positions</a>
-          <a href="#education">Education</a>
-          <a href="#research">Research Interests</a>
-          <a href="#publications">Publications</a>
-          <a href="#awards">Awards</a>
-          <a href="#activities">Service & Talks</a>
-          <a href="#contact">Contact</a>
-        </div>
-      </div>
-
-      <p class="smallmuted">Last updated Nov 2025</p>
-    </aside>
-
-    <!-- Main -->
-    <main>
-      <section id="about">
-        <h2>About</h2>
-        <p>
-          I am a Principal Data Scientist in the Department of Translational Molecular Pathology and the Institute for Data Science in Oncology at
-          The University of Texas MD Anderson Cancer Center. I develop AI for histopathology and integrate it with spatial transcriptomics and
-          other omics to study tumor ecosystems and treatment response.
+  <div class="container wrap">
+    <div class="grid">
+      <!-- ===== Left Column ===== -->
+      <aside class="left">
+        <img class="photo" src="./pic/XiaoxiPan.jpg" alt="Photo of Xiaoxi Pan">
+        <div class="name">Xiaoxi Pan, Ph.D.</div>
+        <p class="affil">
+          Principal Data Scientist<br>
+          MD Anderson Cancer Center
         </p>
-        <div class="toc">
-          <a href="#news">News</a>
-          <a href="#publications">Publications</a>
-          <a href="#activities">Talks & Service</a>
-          <a href="#contact">Contact</a>
+
+        <div class="block">
+          <div class="label">Email:</div>
+          <a href="mailto:xpan7@mdanderson.org">xpan7@mdanderson.org</a>
         </div>
-      </section>
+        <div class="block">
+          <div class="label">GitHub:</div>
+          <a href="https://github.com/xi11" target="_blank" rel="noopener">github.com/xi11</a>
+        </div>
+        <div class="block">
+          <div class="label">Address:</div>
+          7255 Helix Park Ave, Unit 2045.23<br>Houston, TX 77030
+        </div>
 
-      <section id="news">
-        <h2>News</h2>
-        <ul class="clean">
-          <li><span class="time">Oct 2025</span> — Spotlight at CVPR Workshop MMFM-BIOMED for <em>CellSymphony</em>.</li>
-          <li><span class="time">Sep 2025</span> — Invited talk at IDSO Fellowship Seminar (MD Anderson).</li>
-          <li><span class="time">May 2025</span> — Talk at Colorectal Cancer Integromics series.</li>
-        </ul>
-      </section>
+        <div class="line"></div>
+        <div class="block">
+          <div class="label">Navigate</div>
+          <div><a href="#about">About</a></div>
+          <div><a href="#news">News</a></div>
+          <div><a href="#positions">Positions</a></div>
+          <div><a href="#education">Education</a></div>
+          <div><a href="#research">Research</a></div>
+          <div><a href="#publications">Publications</a></div>
+          <div><a href="#awards">Awards</a></div>
+          <div><a href="#activities">Service & Talks</a></div>
+          <div><a href="#contact">Contact</a></div>
+        </div>
 
-      <section id="positions">
-        <h2>Positions</h2>
-        <ul class="clean">
-          <li><strong>Principal Data Scientist</strong> <span class="time">Dec 2024 – Present</span><br>
+        <div class="line"></div>
+        <div class="block muted">Last updated Nov 2025</div>
+      </aside>
+
+      <!-- ===== Right Column ===== -->
+      <main class="right">
+        <section id="about" class="section">
+          <h2>About</h2>
+          <p>
+            I am a Principal Data Scientist in the Department of Translational Molecular Pathology and the Institute for Data Science in Oncology at
+            The University of Texas MD Anderson Cancer Center. I develop AI for histopathology and integrate it with spatial transcriptomics and
+            other omics to study tumor ecosystems and treatment response.
+          </p>
+        </section>
+
+        <section id="news" class="section">
+          <h2>News</h2>
+          <ul class="clean">
+            <li><span class="time">Oct 2025</span> — Spotlight at CVPR Workshop MMFM-BIOMED for <em>CellSymphony</em>.</li>
+            <li><span class="time">Sep 2025</span> — Invited talk at IDSO Fellowship Seminar (MD Anderson).</li>
+            <li><span class="time">May 2025</span> — Talk at Colorectal Cancer Integromics series.</li>
+          </ul>
+        </section>
+
+        <section id="positions" class="section">
+          <h2>Positions</h2>
+          <ul class="clean">
+            <li><strong>Principal Data Scientist</strong> <span class="time">Dec 2024 – Present</span><br>
               <span class="where">Translational Molecular Pathology & Institute for Data Science in Oncology, MD Anderson Cancer Center</span></li>
-          <li><strong>Instructor</strong> <span class="time">Sep 2023 – Dec 2024</span><br>
+            <li><strong>Instructor</strong> <span class="time">Sep 2023 – Dec 2024</span><br>
               <span class="where">MD Anderson Cancer Center</span></li>
-          <li><strong>Postdoctoral Training Fellow</strong> <span class="time">Sep 2020 – Aug 2023</span><br>
+            <li><strong>Postdoctoral Training Fellow</strong> <span class="time">Sep 2020 – Aug 2023</span><br>
               <span class="where">Institute of Cancer Research, London (UK)</span></li>
-        </ul>
-      </section>
+          </ul>
+        </section>
 
-      <section id="education">
-        <h2>Education</h2>
-        <ul class="clean">
-          <li><strong>Ph.D., Optics, Photonics & Image Processing</strong> <span class="time">2016 – 2019</span><br>
+        <section id="education" class="section">
+          <h2>Education</h2>
+          <ul class="clean">
+            <li><strong>Ph.D., Optics, Photonics & Image Processing</strong> <span class="time">2016 – 2019</span><br>
               <span class="where">Ecole Centrale de Marseille & Institut Fresnel, France</span></li>
-          <li><strong>M.E., Astronautics Eng. (Pattern Recognition & Intelligent Systems)</strong> <span class="time">2013 – 2016</span><br>
+            <li><strong>M.E., Astronautics Engineering (Pattern Recognition & Intelligent Systems)</strong> <span class="time">2013 – 2016</span><br>
               <span class="where">Beihang University, Beijing</span></li>
-          <li><strong>B.E., Detection, Guidance & Control Technology</strong> <span class="time">2009 – 2013</span><br>
+            <li><strong>B.E., Detection, Guidance & Control Technology</strong> <span class="time">2009 – 2013</span><br>
               <span class="where">Northwestern Polytechnical University, Xi’an</span></li>
-        </ul>
-      </section>
+          </ul>
+        </section>
 
-      <section id="research">
-        <h2>Research Interests</h2>
-        <p>Computational Pathology, Spatial Omics Integration, Lung Cancer, TNBC, Medical Image Analysis, Foundation Models for Pathology.</p>
-      </section>
+        <section id="research" class="section">
+          <h2>Research Interests</h2>
+          <p>Computational Pathology, Spatial Omics Integration, Lung Cancer, TNBC, Medical Image Analysis, Foundation Models for Pathology.</p>
+        </section>
 
-      <section id="publications">
-        <h2>Selected Publications</h2>
-        <p class="muted">j = journal, c = conference, b = book chapter. ∗ corresponding author.</p>
-        <ul class="clean pub">
-          <li>[j7] <strong>ANORAK improves histopathological grading of lung adenocarcinoma</strong>. <em>Nature Cancer</em>, 2024. <span class="tag">j</span></li>
-          <li>[j10] <strong>AI-derived TILs predict pCR in early-stage TNBC</strong>. <em>Clinical Cancer Research</em>, in revision. <span class="tag">j</span></li>
-          <li>[j11] <strong>AI-guided spatial path-omics on pollutant-induced TME reprogramming</strong>. <em>Nature Cancer</em>, under review. <span class="tag">j</span></li>
-          <li>[j9] <strong>Gompertz growth with shared carrying capacity</strong>. <em>British Journal of Cancer</em>, accepted. <span class="tag">j</span></li>
-          <li>[j6] <strong>Multi-view separable pyramid network for AD prediction</strong>. <em>IEEE TMI</em>, 2021. <span class="tag">j</span></li>
-          <li>[c6] <strong>Immune-guided AI for reproducible ROI selection in mIF</strong>. MICCAI, 2024. <span class="tag">c</span></li>
-          <li>[c5] ∗ <strong>Semi-supervised pseudo-labeling for multiplex IF cell detection</strong>. MIDL, 2024. <span class="tag">c</span></li>
-          <li>[c3] <strong>Segmentation of LUAD growth patterns via cross-stream interactions</strong>. MICCAI WS, 2022. <span class="tag">c</span></li>
-          <li>[b1] <strong>AD CAD on PET using image processing</strong>. IntechOpen, 2019. <span class="tag">b</span></li>
-        </ul>
-        <p class="foot">Full list available upon request or via Google Scholar.</p>
-      </section>
+        <section id="publications" class="section">
+          <h2>Selected Publications</h2>
+          <p class="muted">j = journal, c = conference, b = book chapter. ∗ corresponding author.</p>
+          <ul class="clean">
+            <li>[j7] <strong>ANORAK improves histopathological grading of lung adenocarcinoma</strong>. <em>Nature Cancer</em>, 2024.</li>
+            <li>[j10] <strong>AI-derived TILs predict pCR in early-stage TNBC</strong>. <em>Clinical Cancer Research</em>, in revision.</li>
+            <li>[j11] <strong>AI-guided spatial path-omics on pollutant-induced TME reprogramming</strong>. <em>Nature Cancer</em>, under review.</li>
+            <li>[j9] <strong>Gompertz growth with shared carrying capacity</strong>. <em>British Journal of Cancer</em>, accepted.</li>
+            <li>[j6] <strong>Multi-view separable pyramid network for AD prediction</strong>. <em>IEEE TMI</em>, 2021.</li>
+            <li>[c6] <strong>Immune-guided AI for reproducible ROI selection in mIF</strong>. MICCAI, 2024.</li>
+            <li>[c5] ∗ <strong>Semi-supervised pseudo-labeling for multiplex IF cell detection</strong>. MIDL, 2024.</li>
+            <li>[c3] <strong>Segmentation of LUAD growth patterns via cross-stream interactions</strong>. MICCAI WS, 2022.</li>
+            <li>[b1] <strong>AD CAD on PET using image processing</strong>. IntechOpen, 2019.</li>
+          </ul>
+          <p class="foot">Full list available upon request or via Google Scholar.</p>
+        </section>
 
-      <section id="awards">
-        <h2>Awards & Honors</h2>
-        <ul class="clean">
-          <li>National Scholarship (China; top national award for master’s students), 2015</li>
-          <li>Outstanding Research Paper Award, Beihang University, 2016 & 2015</li>
-          <li>Outstanding Master’s Thesis, School of Astronautics, 2016</li>
-          <li>Scholarships, Northwestern Polytechnical University: First (2010; top 10%) and Second (2011, 2012)</li>
-        </ul>
-      </section>
+        <section id="awards" class="section">
+          <h2>Awards & Honors</h2>
+          <ul class="clean">
+            <li>National Scholarship (China; top national award for master’s students), 2015</li>
+            <li>Outstanding Research Paper Award, Beihang University, 2016 & 2015</li>
+            <li>Outstanding Master’s Thesis, School of Astronautics, 2016</li>
+            <li>Scholarships, Northwestern Polytechnical University: First (2010; top 10%) and Second (2011, 2012)</li>
+          </ul>
+        </section>
 
-      <section id="activities">
-        <h2>Service & Talks</h2>
-        <ul class="clean">
-          <li>Invited talks: IDSO Fellowship Seminar (Oct 2025); Colorectal Cancer Integromics (May 2025);
+        <section id="activities" class="section">
+          <h2>Service & Talks</h2>
+          <ul class="clean">
+            <li>Invited talks: IDSO Fellowship Seminar (Oct 2025); Colorectal Cancer Integromics (May 2025);
               TMC AI Summit workshop (Feb 2025); Divisional Grand Rounds (Feb 2025); GSBS Cancer Biology Retreat (Nov 2023);
               Alan Turing Institute “Omics to AI” (May 2022)</li>
-          <li>Meta-reviewer: ISBI 2025; Organizer: TMMP seminar series (2024–2025)</li>
-          <li>Guest lecturer: Probabilities in Bioinformatics, Rice University (Apr 2024 & 2025)</li>
-          <li>Peer review: Nature Communications, PLOS Comp Bio, IEEE TMI, IEEE GRSL, IEEE Access, IEEE TIM, Scientific Reports</li>
-          <li>Mentorship: two data scientists (lead) and co-mentorship of a data scientist and a postdoc</li>
-        </ul>
-      </section>
+            <li>Meta-reviewer: ISBI 2025; Organizer: TMMP seminar series (2024–2025)</li>
+            <li>Guest lecturer: Probabilities in Bioinformatics, Rice University (Apr 2024 & 2025)</li>
+            <li>Peer review: Nature Communications, PLOS Comp Bio, IEEE TMI, IEEE GRSL, IEEE Access, IEEE TIM, Scientific Reports</li>
+            <li>Mentorship: two data scientists (lead) and co-mentorship of a data scientist and a postdoc</li>
+          </ul>
+        </section>
 
-      <section id="contact">
-        <h2>Contact</h2>
-        <p>
-          <span class="mono">xpan7@mdanderson.org</span> &nbsp;|&nbsp;
-          <a href="https://github.com/xi11" target="_blank" rel="noopener">GitHub @xi11</a><br/>
-          7255 Helix Park Ave, Unit 2045.23, Houston, TX 77030
-        </p>
-      </section>
-    </main>
+        <section id="contact" class="section">
+          <h2>Contact</h2>
+          <p>
+            <strong>Email:</strong> <a href="mailto:xpan7@mdanderson.org">xpan7@mdanderson.org</a><br>
+            <strong>GitHub:</strong> <a href="https://github.com/xi11" target="_blank" rel="noopener">github.com/xi11</a><br>
+            <strong>Address:</strong> 7255 Helix Park Ave, Unit 2045.23, Houston, TX 77030
+          </p>
+        </section>
+      </main>
+    </div>
   </div>
 
-  <div class="wrap">
+  <!-- Full-width bottom banner (half viewport) -->
+  <div class="container">
     <div class="banner-bottom" aria-hidden="true"></div>
     <p class="foot">© <script>document.write(new Date().getFullYear())</script> Xiaoxi Pan</p>
   </div>
