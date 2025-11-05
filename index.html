@@ -42,7 +42,7 @@
     
     /* Use different images for each */
     .banner-top {
-      background-image: url('./pic/banner2.jpg');
+      background-image: url('./pic/banner1.jpg');
       background-position:center top;
       height:20vh; /* or 50vh if you prefer full half */
       border-bottom:1px solid var(--line);
@@ -86,7 +86,23 @@
 
     /* Optional: on very short screens, reduce banner heights a bit */
     @media (max-height:700px){
-      .banner-top,.banner-bottom{height:40vh}
+      .banner-top,.banner-bottom{height:20vh}
+    }
+        ul.clean li {
+      margin-top: 18px;       /* space above each item */
+      margin-bottom: 22px;    /* space below each item */
+      line-height: 1.5;       /* tighter inside spacing */
+    }
+    
+    ul.clean li strong:first-of-type {
+      display: block;
+      margin-bottom: 2px;     /* small gap between title and authors */
+    }
+    
+    ul.clean li em {
+      display: block;
+      font-style: italic;
+      margin-top: 2px;        /* small gap before journal */
     }
   </style>
 </head>
@@ -160,6 +176,12 @@
 
         <section id="publications" class="section">
           <h2>Selected Publications</h2>
+           <p>
+            Full list available upon request or via
+            <a href="https://scholar.google.com/citations?user=HlK3iTkAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener">
+              Google Scholar
+            </a>.
+          </p>
           <ul class="clean">
             <li><strong>AI-guided spatial path-omics reveals pollutant-induced microenvironment reprogramming in lung adenocarcinoma</strong> 
              <br> <strong>Xiaoxi Pan,</strong> Alexandria Lau, Maria Esther Salvatierra, Simon P. Castillo, Jake Leighton, Frank R. Rojas, B. Leticia Rodriguez, 
@@ -185,7 +207,7 @@
               <br> <strong>Xiaoxi Pan,</strong> Trong-Le Phan, Mouloud Adel,Caroline Fossati, Thierry Gaidon, Julien Wojak, Eric Guedj. <em>IEEE Transactions on Medical Imaging</em>, 2021.</li>
  
           </ul>
-          <p class="foot">Full list available upon request or via Google Scholar.</p>
+          
         </section>
 
         <section id="activities" class="section">
@@ -220,6 +242,7 @@
   </div>
 </body>
 </html>
+
 
 
 
