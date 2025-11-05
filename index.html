@@ -26,11 +26,34 @@
     .container{max-width:var(--maxw);margin:0 auto;padding:0 6px}
 
     /* ===== Full-bleed split banners: half + half ===== */
-    .banner-top,.banner-bottom{
-      width:100vw; position:relative; left:50%; right:50%;
-      margin-left:-50vw; margin-right:-50vw;
-      background:url('./pic/banner.jpg') center/cover no-repeat;
-      display:block; filter:saturate(105%);
+    .banner-top,
+    .banner-bottom {
+      width:100vw;
+      position:relative;
+      left:50%;
+      right:50%;
+      margin-left:-50vw;
+      margin-right:-50vw;
+      display:block;
+      filter:saturate(105%);
+      background-size:cover;
+      background-repeat:no-repeat;
+    }
+    
+    /* Use different images for each */
+    .banner-top {
+      background-image: url('./pic/banner1.jpg');
+      background-position:center top;
+      height:25vh; /* or 50vh if you prefer full half */
+      border-bottom:1px solid var(--line);
+    }
+    
+    .banner-bottom {
+      background-image: url('./pic/banner2.jpg');
+      background-position:center bottom;
+      height:25vh;
+      border-top:1px solid var(--line);
+      margin-top:28px;
     }
     .banner-top{height:20vh; background-position:center top; border-bottom:1px solid var(--line);}
     .banner-bottom{height:20vh; background-position:center bottom; border-top:1px solid var(--line); margin-top:28px;}
@@ -189,6 +212,7 @@
   </div>
 </body>
 </html>
+
 
 
 
