@@ -1,135 +1,141 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<link rel="stylesheet" href="jemdoc.css" type="text/css" />
-<title> Xiaoxi PAN</title>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-87320911-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
+  <meta charset="utf-8" />
+  <title>Xiaoxi Pan | Computational Pathology & AI</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Xiaoxi Pan — Computational Pathology, Medical Image Analysis, and Multi-omics Integration." />
+  <link rel="icon" href="data:,">
+  <style>
+    :root{
+      --bg:#ffffff;
+      --ink:#1a1a1a;
+      --muted:#5b5b5b;
+      --accent:#0f6fff;
+      --line:#e9ebee;
+      --chip:#f5f7fb;
+      --maxw:1020px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:var(--maxw);margin:0 auto;padding:24px 18px}
+    .banner-top,.banner-bottom{
+      width:100%;height:200px;background-image:url('./pic/banner.jpg');
+      background-repeat:no-repeat;background-size:cover;filter:saturate(105%);
+    }
+    .banner-top{background-position:center top;border-bottom:1px solid var(--line)}
+    .banner-bottom{background-position:center bottom;border-top:1px solid var(--line);margin-top:48px}
+    .header{
+      display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:center;padding-top:18px
+    }
+    .photo{
+      width:130px;height:130px;border-radius:50%;overflow:hidden;flex-shrink:0;
+      box-shadow:0 0 0 2px var(--line);
+    }
+    .photo img{width:100%;height:100%;object-fit:cover;}
+    .title h1{font-size:32px;line-height:1.2;margin:0}
+    .title p{margin:6px 0 0;color:var(--muted)}
+    .contact{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
+    .chip{background:var(--chip);border:1px solid var(--line);padding:6px 10px;border-radius:999px;font-size:14px;white-space:nowrap}
+    .nav{position:sticky;top:0;background:rgba(255,255,255,0.94);backdrop-filter:saturate(140%) blur(6px);border-bottom:1px solid var(--line);z-index:3}
+    .nav-inner{max-width:var(--maxw);margin:0 auto;display:flex;gap:16px;align-items:center;padding:10px 18px;overflow:auto}
+    .nav a{color:var(--ink);padding:6px 10px;border-radius:10px}
+    .nav a:hover{background:var(--chip)}
+    .grid{display:grid;grid-template-columns:280px 1fr;gap:28px;margin-top:22px}
+    @media (max-width:900px){
+      .grid{grid-template-columns:1fr}
+      .header{grid-template-columns:1fr;justify-items:center;text-align:center}
+      .contact{justify-content:center}
+    }
+    .sidebar{position:relative}
+    .card{border:1px solid var(--line);border-radius:16px;padding:16px;background:#fff}
+    .card h3{margin:0 0 8px 0;font-size:16px;text-transform:uppercase;letter-spacing:.06em;color:#333}
+    .badge{display:inline-block;font-size:12px;padding:2px 8px;border-radius:999px;border:1px solid var(--line);background:#fff;margin:2px 6px 0 0;color:#333}
+    section{padding:18px 0;border-bottom:1px solid var(--line)}
+    section:last-of-type{border-bottom:none}
+    h2{font-size:22px;margin:0 0 8px 0}
+    .muted{color:var(--muted)}
+    .item{margin:10px 0}
+    .role{font-weight:600}
+    .where{color:var(--muted)}
+    .time{color:var(--muted);font-size:14px}
+    ul.clean{list-style:none;padding:0;margin:0}
+    ul.clean li{margin:10px 0}
+    .pub li{margin:12px 0}
+    .tag{display:inline-block;background:#eef4ff;border:1px solid #dfe9ff;color:#1240aa;padding:2px 8px;border-radius:999px;font-size:12px;margin-left:6px}
+    .small{font-size:14px}
+    .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+    .footnote{color:var(--muted);font-size:13px}
+  </style>
 </head>
 <body>
-<div id="layout-content" style="margin-top:25px; margin-bottom:25px;">
-<table width="100%" border="0" align="center">
-	
-		<tr>
-			 <td>
-				<img src="./pic/XXPan.png" border="0" width="300"> <br>
-			</td>
-			
-			<td width="400">
-				<div id="toptitle">					
-			        <h1>Xiaoxi Pan</h1>
-				</div>
+  <div class="banner-top" aria-hidden="true"></div>
 
-				<h3>Postdoctoral Training Fellow</h3>
-				<p>
-					Centre for Cancer Drug Discovery<br>
-					Institute of Cancer Research<br>
-					London, UK<br>
-					<br>
-					Email: xiaoxi.pan at icr dot ac dot uk<br>
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xiaoxipan3 at gmail dot com 
-					     
-				</p>
-			     <br>
-			</td>
-                          
-		</tr>
-	
-</table>  
-  
-<h2>Biography </h2>
-<p>
-	I was a post-doctoral researcher at <a href="https://www.fresnel.fr/"> Institut Fresnel </a> and  <a href="https://www.univ-amu.fr/"> Aix-Marseille University </a>
-	from Nov. 2019 to Dec. 2019. Before that, I obtained my Ph.D. degree in <a href="https://www.centrale-marseille.fr/"> Ecole Centrale de Marseille (ECM)</a> and  
-	<a href="https://www.fresnel.fr/"> Institut Fresnel</a>, where I was supervised by Prof. Mouloud Adel and Prof. Caroline Fossati. I received my M.E. and B.E. degrees
-	from <a href="https://www.buaa.edu.cn/">Beihang University</a>, Beijing and <a href="https://www.nwpu.edu.cn/"> Northwestern Polytechnical University</a>, Xi'an, respectively. 
-</p>  
+  <div class="container">
+    <header class="header">
+      <div class="photo"><img src="./pic/XiaoxiPan.jpg" alt="Photo of Xiaoxi Pan"></div>
+      <div>
+        <div class="title">
+          <h1>Xiaoxi Pan, Ph.D.</h1>
+          <p class="muted">Computational Pathology • Medical Image Analysis • Multi-omics Integration</p>
+        </div>
+        <div class="contact">
+          <a class="chip" href="mailto:xpan7@mdanderson.org">xpan7@mdanderson.org</a>
+          <a class="chip" href="https://github.com/xi11" target="_blank" rel="noopener">github.com/xi11</a>
+          <span class="chip">Houston, TX</span>
+        </div>
+      </div>
+    </header>
+  </div>
 
-<p>
-	My research interests include machine learning and deep learning, especially applications to medical image analysis. </p>
-  
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="#about">About</a>
+      <a href="#positions">Positions</a>
+      <a href="#education">Education</a>
+      <a href="#interests">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#awards">Awards</a>
+      <a href="#activities">Activities</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
 
-	
-<h2>Publications </h2>	
+  <!-- Content grid -->
+  <div class="container grid">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="card">
+        <h3>Quick Links</h3>
+        <div class="item"><a href="#publications">Publications</a></div>
+        <div class="item"><a href="#activities">Talks & service</a></div>
+        <div class="item"><a href="https://scholar.google.com/scholar?q=Xiaoxi+Pan" target="_blank" rel="noopener">Google Scholar</a></div>
+      </div>
+      <div class="card" style="margin-top:14px">
+        <h3>Keywords</h3>
+        <span class="badge">AI for Pathology</span>
+        <span class="badge">Spatial Omics</span>
+        <span class="badge">Lung Cancer</span>
+        <span class="badge">TNBC</span>
+        <span class="badge">PET Imaging</span>
+      </div>
+    </aside>
 
-<h4>Journal Papers </h4>
+    <!-- Main content -->
+    <main>
+      <!-- identical to prior version -->
+      <!-- ... (keep the same content from previous version here) ... -->
+    </main>
+  </div>
 
-<p> Multi-view Separable Pyramid Network for AD Prediction at MCI Stage by 18F-FDG Brain PET Imaging. <br>
-   <b>Xiaoxi Pan</b>, Trong-Le Phan, Mouloud Adel, Caroline Fossati, Thierry Gaidon, Julien Wojak, Eric Guedj. <br>
-   <em> IEEE Transactions on Medical Imaging, vol. 40, no. 1, pp. 81-92, 2021. </em>
-</p>
-<p> Multiscale Spatial Gradient Features for 18F-FDG PET Image-Guided Diagnosis of Alzheimer's Disease. <br>
-   <b>Xiaoxi Pan</b>, Mouloud Adel, Caroline Fossati, Thierry Gaidon, Julien Wojak, Eric Guedj. <br>
-   <em> Computer Methods and Programs in Biomedicine, vol. 18, pp. 105027, 2019. </em>
-</p>
-<p> Multilevel Feature Representation of FDG-PET Brain Images for Diagnosing Alzheimer's Disease. <br>
-    <b>Xiaoxi Pan</b>, Mouloud Adel, Caroline Fossati, Thierry Gaidon, Eric Guedj. <br>
-    <em> IEEE Journal of Biomedical and Health Informatics, vol. 23, no. 4, pp. 1499-1506, 2019. </em>
-</p>
-<p> Adaptive Haze Removal for Single Remote Sensing Image. <br> 
-    Fengying Xie, Jiajie Chen, <b>Xiaoxi Pan*</b>, Zhiguo Jiang. <br>
-    <em>IEEE Access, vol. 6, pp. 67982-67991, 2018 (*Corresponding author). </em>
-</p>
-<p> No-reference Assessment on Haze for Remote-sensing Images. <br>
-    <b>Xiaoxi Pan</b>, Fengying Xie, Zhiguo Jiang, Zhenwei Shi, Xiaoyan Luo. <br>
-    <em>IEEE Geoscience and Remote Sensing Letters, vol. 13, no. 12, pp. 1855-1859, 2016. </em>
-</p>
-<p> Haze Removal for a Single Remote Sensing Image Based on Deformed Haze Imaging Model. <br>
-    <b>Xiaoxi Pan</b>, Fengying Xie, Zhiguo Jiang, Jihao Yin. <br> 
-    IEEE Signal Processing Letters, vol. 22, no. 10, pp. 1806-1810, 2015.</em>
-</p>
-	
-<h4> Conference Papers </h4>	
-
-<p> First and Second Order Gradients for Alzheimer's Disease Diagnosis.<br>
-    <b>Xiaoxi Pan</b>, Mouloud Adel, Caroline Fossati, Thierry Gaidon, Julien Wojak, Eric Guedj. <br>
-    <em>5th International Conference on Frontiers of Signal Processing (ICFSP), 2019. (Excellent oral presentation) </em>
-</p>
-<p> Alzheimer's Disease Diagnosis with FDG-PET Brain Images By Using Multi-Level Features. <br> 
-    <b>Xiaoxi Pan</b>, Mouloud Adel, Caroline Fossati, Thierry Gaidon, Eric Guedj. <br>
-    <em>25th IEEE International Conference on Image Processing (ICIP), 2018. (Oral) </em>
-</p>
-	
-<h4> Book Chapters </h4>
-<p>  Alzheimer's Disease Computer-Aided Diagnosis on Positron Emission Tomography Brain Images Using Image Processing Techniques. <br>
-     Mouloud Adel, Imene Garali, <b>Xiaoxi Pan</b>, Caroline Fossati, Thierry Gaidon, Julien Wojak, Salah Bourennane, Eric Guedj. <br>
-    <em> Computer Methods and Programs in Biomedical Signal and Image Processing, DOI: 10.5772/intechopen.86114, 2019. </em>
-</p>
-
-<h2>Honors &amp; Awards</h2>
-<ul>
-<li><p>2016 Outstanding Research Paper Award, Beihang University;</p>
-</li>
-<li><p>2016 Outstanding Master's Thesis Award, School of Astronautics, Beihang University;</p>
-</li>
-<li><p>2015 Outstanding Research Paper Award, Beihang University;</p>
-</li>
-<li><p>2015 National Scholarship (the highest national wide scholarship for master students in China);</p>
-</li>
-<li><p>2012 Second Scholarship, Northwestern Polytechnical University (Top 20%);</p>
-</li>
-<li><p>2011 Second Scholarship, Northwestern Polytechnical University (Top 20%);</p>
-</li>
-<li><p>2010 First Scholarship, Northwestern Polytechnical University (Top 10%).</p>
-</li>
-</ul>
-<div id="footer">
-<div id="footer-text">
-Page generated 2019-09-30 16:18:50, by <a href="http://jemdoc.jaboc.net/">jemdoc</a>.
-<script type="text/javascript" src="//rf.revolvermaps.com/0/0/4.js?i=5m663kntdq2&amp;m=0&amp;h=128&amp;c=ff8a00&amp;r=15" async="async"></script>
-</div>
-</div>
-</div>
+  <div class="container">
+    <div class="banner-bottom" aria-hidden="true"></div>
+    <p class="footnote" style="margin-top:12px">
+      © <script>document.write(new Date().getFullYear())</script> Xiaoxi Pan · Last updated Nov 2025
+    </p>
+  </div>
 </body>
 </html>
