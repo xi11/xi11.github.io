@@ -23,44 +23,20 @@
     a{color:var(--accent);text-decoration:none}
     a:hover{text-decoration:underline}
     /* Split banner */
-    .banner-top,
-    .banner-bottom{
-      /* make them truly edge-to-edge regardless of container padding */
-      width: 100vw;
-      position: relative;
-      left: 50%;
-      right: 50%;
-      margin-left: -50vw;
-      margin-right: -50vw;
-    
-      background-image: url('./pic/banner.jpg');
-      background-repeat: no-repeat;
-      background-size: cover;
-      filter: saturate(105%);
-      display: block;
-      border: 0;
+    .banner-top,.banner-bottom{
+      width:100%;height:180px;background:url('./pic/banner.jpg') center/cover no-repeat;filter:saturate(105%)
     }
-    
-    /* heights: top = 2/3 of viewport, bottom = 1/3 of viewport */
-    .banner-top{
-      height: 66vh;                 /* top 2/3 */
-      background-position: center top;
-      border-bottom: 1px solid var(--line);
+    .banner-top{background-position:center top;border-bottom:1px solid var(--line)}
+    .banner-bottom{background-position:center bottom;border-top:1px solid var(--line);margin-top:40px}
+    /* Page layout */
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:24px 18px}
+    .grid{display:grid;grid-template-columns:var(--sidebar) 1fr;gap:28px}
+    @media (max-width:980px){
+      :root{--sidebar:100%}
+      .grid{grid-template-columns:1fr}
+      .sidebar{position:static;top:auto}
     }
-    
-    .banner-bottom{
-      height: 34vh;                 /* bottom 1/3 */
-      background-position: center bottom;
-      border-top: 1px solid var(--line);
-      margin-top: 0;                /* ensure banners touch or adjust as you like */
-    }
-    
-    /* Optional: cap max height on very tall screens so content isn't pushed too far down */
-    @media (min-height: 1200px){
-      .banner-top{ height: 720px; }   /* ~2/3 of 1080p */
-      .banner-bottom{ height: 360px; }/* ~1/3 of 1080p */
-    }
-    /* Sidebar */
+    /* Sidebar (CUHK-style) */
     .sidebar{
       position:sticky; top:12px; align-self:start;
       border:1px solid var(--line); border-radius:16px; background:#fff; padding:18px;
