@@ -9,133 +9,234 @@
   <style>
     :root{
       --bg:#ffffff;
-      --ink:#1a1a1a;
+      --ink:#1b1b1b;
       --muted:#5b5b5b;
-      --accent:#0f6fff;
       --line:#e9ebee;
-      --chip:#f5f7fb;
-      --maxw:1020px;
+      --chip:#f6f8fb;
+      --accent:#0f6fff;
+      --maxw:1200px;
+      --sidebar:310px;
     }
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+    html{scroll-behavior:smooth}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
     a{color:var(--accent);text-decoration:none}
     a:hover{text-decoration:underline}
-    .container{max-width:var(--maxw);margin:0 auto;padding:24px 18px}
-    .banner-top,.banner-bottom{
-      width:100%;height:200px;background-image:url('./pic/banner.jpg');
-      background-repeat:no-repeat;background-size:cover;filter:saturate(105%);
+    /* Split banner */
+    .banner-top,
+    .banner-bottom{
+      /* make them truly edge-to-edge regardless of container padding */
+      width: 100vw;
+      position: relative;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+    
+      background-image: url('./pic/banner.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      filter: saturate(105%);
+      display: block;
+      border: 0;
     }
-    .banner-top{background-position:center top;border-bottom:1px solid var(--line)}
-    .banner-bottom{background-position:center bottom;border-top:1px solid var(--line);margin-top:48px}
-    .header{
-      display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:center;padding-top:18px
+    
+    /* heights: top = 2/3 of viewport, bottom = 1/3 of viewport */
+    .banner-top{
+      height: 66vh;                 /* top 2/3 */
+      background-position: center top;
+      border-bottom: 1px solid var(--line);
     }
-    .photo{
-      width:130px;height:130px;border-radius:50%;overflow:hidden;flex-shrink:0;
-      box-shadow:0 0 0 2px var(--line);
+    
+    .banner-bottom{
+      height: 34vh;                 /* bottom 1/3 */
+      background-position: center bottom;
+      border-top: 1px solid var(--line);
+      margin-top: 0;                /* ensure banners touch or adjust as you like */
     }
-    .photo img{width:100%;height:100%;object-fit:cover;}
-    .title h1{font-size:32px;line-height:1.2;margin:0}
-    .title p{margin:6px 0 0;color:var(--muted)}
-    .contact{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
-    .chip{background:var(--chip);border:1px solid var(--line);padding:6px 10px;border-radius:999px;font-size:14px;white-space:nowrap}
-    .nav{position:sticky;top:0;background:rgba(255,255,255,0.94);backdrop-filter:saturate(140%) blur(6px);border-bottom:1px solid var(--line);z-index:3}
-    .nav-inner{max-width:var(--maxw);margin:0 auto;display:flex;gap:16px;align-items:center;padding:10px 18px;overflow:auto}
-    .nav a{color:var(--ink);padding:6px 10px;border-radius:10px}
-    .nav a:hover{background:var(--chip)}
-    .grid{display:grid;grid-template-columns:280px 1fr;gap:28px;margin-top:22px}
-    @media (max-width:900px){
-      .grid{grid-template-columns:1fr}
-      .header{grid-template-columns:1fr;justify-items:center;text-align:center}
-      .contact{justify-content:center}
+    
+    /* Optional: cap max height on very tall screens so content isn't pushed too far down */
+    @media (min-height: 1200px){
+      .banner-top{ height: 720px; }   /* ~2/3 of 1080p */
+      .banner-bottom{ height: 360px; }/* ~1/3 of 1080p */
     }
-    .sidebar{position:relative}
-    .card{border:1px solid var(--line);border-radius:16px;padding:16px;background:#fff}
-    .card h3{margin:0 0 8px 0;font-size:16px;text-transform:uppercase;letter-spacing:.06em;color:#333}
-    .badge{display:inline-block;font-size:12px;padding:2px 8px;border-radius:999px;border:1px solid var(--line);background:#fff;margin:2px 6px 0 0;color:#333}
-    section{padding:18px 0;border-bottom:1px solid var(--line)}
-    section:last-of-type{border-bottom:none}
-    h2{font-size:22px;margin:0 0 8px 0}
+    /* Sidebar */
+    .sidebar{
+      position:sticky; top:12px; align-self:start;
+      border:1px solid var(--line); border-radius:16px; background:#fff; padding:18px;
+    }
+    .photo{width:180px;height:180px;border-radius:6px;overflow:hidden;margin:4px auto 14px auto;box-shadow:0 0 0 1px var(--line)}
+    .photo img{width:100%;height:100%;object-fit:cover}
+    .name{font-size:26px;font-weight:700;margin:0;text-align:center}
+    .role{color:var(--muted);text-align:center;margin:6px 0 10px 0}
+    .contact{display:flex;flex-direction:column;gap:8px;margin-top:8px}
+    .chip{display:flex;align-items:center;gap:8px;background:var(--chip);border:1px solid var(--line);padding:8px 10px;border-radius:10px;font-size:14px}
+    .smallmuted{font-size:13px;color:var(--muted);text-align:center;margin-top:10px}
+    .side-section{margin-top:16px}
+    .side-title{font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:#333;margin:0 0 8px 0}
+    .side-links{display:flex;flex-direction:column;gap:6px}
+    /* Main content */
+    main section{padding:14px 0 22px;border-bottom:1px solid var(--line)}
+    main section:last-of-type{border-bottom:none}
+    h2{font-size:22px;margin:0 0 6px 0}
     .muted{color:var(--muted)}
-    .item{margin:10px 0}
-    .role{font-weight:600}
-    .where{color:var(--muted)}
-    .time{color:var(--muted);font-size:14px}
-    ul.clean{list-style:none;padding:0;margin:0}
+    ul.clean{list-style:none;margin:0;padding:0}
     ul.clean li{margin:10px 0}
     .pub li{margin:12px 0}
-    .tag{display:inline-block;background:#eef4ff;border:1px solid #dfe9ff;color:#1240aa;padding:2px 8px;border-radius:999px;font-size:12px;margin-left:6px}
-    .small{font-size:14px}
+    .time{font-size:14px;color:var(--muted)}
+    .where{color:var(--muted)}
+    .tag{display:inline-block;background:#eef4ff;border:1px solid #dfe9ff;color:#1240aa;padding:1px 8px;border-radius:999px;font-size:12px;margin-left:6px}
     .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
-    .footnote{color:var(--muted);font-size:13px}
+    .foot{color:var(--muted);font-size:13px;margin-top:8px}
+    /* In-page nav (anchors) */
+    .toc{display:flex;flex-wrap:wrap;gap:10px;margin:8px 0 6px}
+    .toc a{color:var(--ink);padding:6px 10px;border-radius:8px;border:1px solid var(--line);background:#fff}
+    .toc a:hover{background:var(--chip)}
   </style>
 </head>
 <body>
   <div class="banner-top" aria-hidden="true"></div>
 
-  <div class="container">
-    <header class="header">
-      <div class="photo"><img src="./pic/XiaoxiPan.jpg" alt="Photo of Xiaoxi Pan"></div>
-      <div>
-        <div class="title">
-          <h1>Xiaoxi Pan, Ph.D.</h1>
-          <p class="muted">Computational Pathology • Medical Image Analysis • Multi-omics Integration</p>
-        </div>
-        <div class="contact">
-          <a class="chip" href="mailto:xpan7@mdanderson.org">xpan7@mdanderson.org</a>
-          <a class="chip" href="https://github.com/xi11" target="_blank" rel="noopener">github.com/xi11</a>
-          <span class="chip">Houston, TX</span>
-        </div>
-      </div>
-    </header>
-  </div>
-
-  <!-- Navigation -->
-  <nav class="nav">
-    <div class="nav-inner">
-      <a href="#about">About</a>
-      <a href="#positions">Positions</a>
-      <a href="#education">Education</a>
-      <a href="#interests">Research</a>
-      <a href="#publications">Publications</a>
-      <a href="#awards">Awards</a>
-      <a href="#activities">Activities</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </nav>
-
-  <!-- Content grid -->
-  <div class="container grid">
+  <div class="wrap grid">
     <!-- Sidebar -->
     <aside class="sidebar">
-      <div class="card">
-        <h3>Quick Links</h3>
-        <div class="item"><a href="#publications">Publications</a></div>
-        <div class="item"><a href="#activities">Talks & service</a></div>
-        <div class="item"><a href="https://scholar.google.com/scholar?q=Xiaoxi+Pan" target="_blank" rel="noopener">Google Scholar</a></div>
+      <div class="photo"><img src="./pic/XiaoxiPan.jpg" alt="Photo of Xiaoxi Pan"></div>
+      <h1 class="name">Xiaoxi Pan, Ph.D.</h1>
+      <p class="role">Principal Data Scientist<br>MD Anderson Cancer Center</p>
+
+      <div class="contact">
+        <a class="chip" href="mailto:xpan7@mdanderson.org">✉️ &nbsp;<span class="mono">xpan7@mdanderson.org</span></a>
+        <a class="chip" href="https://github.com/xi11" target="_blank" rel="noopener">💻 &nbsp;github.com/xi11</a>
+        <div class="chip">📍 &nbsp;Houston, TX</div>
       </div>
-      <div class="card" style="margin-top:14px">
-        <h3>Keywords</h3>
-        <span class="badge">AI for Pathology</span>
-        <span class="badge">Spatial Omics</span>
-        <span class="badge">Lung Cancer</span>
-        <span class="badge">TNBC</span>
-        <span class="badge">PET Imaging</span>
+
+      <div class="side-section">
+        <h3 class="side-title">Navigate</h3>
+        <div class="side-links">
+          <a href="#about">About</a>
+          <a href="#news">News</a>
+          <a href="#positions">Positions</a>
+          <a href="#education">Education</a>
+          <a href="#research">Research Interests</a>
+          <a href="#publications">Publications</a>
+          <a href="#awards">Awards</a>
+          <a href="#activities">Service & Talks</a>
+          <a href="#contact">Contact</a>
+        </div>
       </div>
+
+      <p class="smallmuted">Last updated Nov 2025</p>
     </aside>
 
-    <!-- Main content -->
+    <!-- Main -->
     <main>
-      <!-- identical to prior version -->
-      <!-- ... (keep the same content from previous version here) ... -->
+      <section id="about">
+        <h2>About</h2>
+        <p>
+          I am a Principal Data Scientist in the Department of Translational Molecular Pathology and the Institute for Data Science in Oncology at
+          The University of Texas MD Anderson Cancer Center. I develop AI for histopathology and integrate it with spatial transcriptomics and
+          other omics to study tumor ecosystems and treatment response.
+        </p>
+        <div class="toc">
+          <a href="#news">News</a>
+          <a href="#publications">Publications</a>
+          <a href="#activities">Talks & Service</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </section>
+
+      <section id="news">
+        <h2>News</h2>
+        <ul class="clean">
+          <li><span class="time">Oct 2025</span> — Spotlight at CVPR Workshop MMFM-BIOMED for <em>CellSymphony</em>.</li>
+          <li><span class="time">Sep 2025</span> — Invited talk at IDSO Fellowship Seminar (MD Anderson).</li>
+          <li><span class="time">May 2025</span> — Talk at Colorectal Cancer Integromics series.</li>
+        </ul>
+      </section>
+
+      <section id="positions">
+        <h2>Positions</h2>
+        <ul class="clean">
+          <li><strong>Principal Data Scientist</strong> <span class="time">Dec 2024 – Present</span><br>
+              <span class="where">Translational Molecular Pathology & Institute for Data Science in Oncology, MD Anderson Cancer Center</span></li>
+          <li><strong>Instructor</strong> <span class="time">Sep 2023 – Dec 2024</span><br>
+              <span class="where">MD Anderson Cancer Center</span></li>
+          <li><strong>Postdoctoral Training Fellow</strong> <span class="time">Sep 2020 – Aug 2023</span><br>
+              <span class="where">Institute of Cancer Research, London (UK)</span></li>
+        </ul>
+      </section>
+
+      <section id="education">
+        <h2>Education</h2>
+        <ul class="clean">
+          <li><strong>Ph.D., Optics, Photonics & Image Processing</strong> <span class="time">2016 – 2019</span><br>
+              <span class="where">Ecole Centrale de Marseille & Institut Fresnel, France</span></li>
+          <li><strong>M.E., Astronautics Eng. (Pattern Recognition & Intelligent Systems)</strong> <span class="time">2013 – 2016</span><br>
+              <span class="where">Beihang University, Beijing</span></li>
+          <li><strong>B.E., Detection, Guidance & Control Technology</strong> <span class="time">2009 – 2013</span><br>
+              <span class="where">Northwestern Polytechnical University, Xi’an</span></li>
+        </ul>
+      </section>
+
+      <section id="research">
+        <h2>Research Interests</h2>
+        <p>Computational Pathology, Spatial Omics Integration, Lung Cancer, TNBC, Medical Image Analysis, Foundation Models for Pathology.</p>
+      </section>
+
+      <section id="publications">
+        <h2>Selected Publications</h2>
+        <p class="muted">j = journal, c = conference, b = book chapter. ∗ corresponding author.</p>
+        <ul class="clean pub">
+          <li>[j7] <strong>ANORAK improves histopathological grading of lung adenocarcinoma</strong>. <em>Nature Cancer</em>, 2024. <span class="tag">j</span></li>
+          <li>[j10] <strong>AI-derived TILs predict pCR in early-stage TNBC</strong>. <em>Clinical Cancer Research</em>, in revision. <span class="tag">j</span></li>
+          <li>[j11] <strong>AI-guided spatial path-omics on pollutant-induced TME reprogramming</strong>. <em>Nature Cancer</em>, under review. <span class="tag">j</span></li>
+          <li>[j9] <strong>Gompertz growth with shared carrying capacity</strong>. <em>British Journal of Cancer</em>, accepted. <span class="tag">j</span></li>
+          <li>[j6] <strong>Multi-view separable pyramid network for AD prediction</strong>. <em>IEEE TMI</em>, 2021. <span class="tag">j</span></li>
+          <li>[c6] <strong>Immune-guided AI for reproducible ROI selection in mIF</strong>. MICCAI, 2024. <span class="tag">c</span></li>
+          <li>[c5] ∗ <strong>Semi-supervised pseudo-labeling for multiplex IF cell detection</strong>. MIDL, 2024. <span class="tag">c</span></li>
+          <li>[c3] <strong>Segmentation of LUAD growth patterns via cross-stream interactions</strong>. MICCAI WS, 2022. <span class="tag">c</span></li>
+          <li>[b1] <strong>AD CAD on PET using image processing</strong>. IntechOpen, 2019. <span class="tag">b</span></li>
+        </ul>
+        <p class="foot">Full list available upon request or via Google Scholar.</p>
+      </section>
+
+      <section id="awards">
+        <h2>Awards & Honors</h2>
+        <ul class="clean">
+          <li>National Scholarship (China; top national award for master’s students), 2015</li>
+          <li>Outstanding Research Paper Award, Beihang University, 2016 & 2015</li>
+          <li>Outstanding Master’s Thesis, School of Astronautics, 2016</li>
+          <li>Scholarships, Northwestern Polytechnical University: First (2010; top 10%) and Second (2011, 2012)</li>
+        </ul>
+      </section>
+
+      <section id="activities">
+        <h2>Service & Talks</h2>
+        <ul class="clean">
+          <li>Invited talks: IDSO Fellowship Seminar (Oct 2025); Colorectal Cancer Integromics (May 2025);
+              TMC AI Summit workshop (Feb 2025); Divisional Grand Rounds (Feb 2025); GSBS Cancer Biology Retreat (Nov 2023);
+              Alan Turing Institute “Omics to AI” (May 2022)</li>
+          <li>Meta-reviewer: ISBI 2025; Organizer: TMMP seminar series (2024–2025)</li>
+          <li>Guest lecturer: Probabilities in Bioinformatics, Rice University (Apr 2024 & 2025)</li>
+          <li>Peer review: Nature Communications, PLOS Comp Bio, IEEE TMI, IEEE GRSL, IEEE Access, IEEE TIM, Scientific Reports</li>
+          <li>Mentorship: two data scientists (lead) and co-mentorship of a data scientist and a postdoc</li>
+        </ul>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>
+          <span class="mono">xpan7@mdanderson.org</span> &nbsp;|&nbsp;
+          <a href="https://github.com/xi11" target="_blank" rel="noopener">GitHub @xi11</a><br/>
+          7255 Helix Park Ave, Unit 2045.23, Houston, TX 77030
+        </p>
+      </section>
     </main>
   </div>
 
-  <div class="container">
+  <div class="wrap">
     <div class="banner-bottom" aria-hidden="true"></div>
-    <p class="footnote" style="margin-top:12px">
-      © <script>document.write(new Date().getFullYear())</script> Xiaoxi Pan · Last updated Nov 2025
-    </p>
+    <p class="foot">© <script>document.write(new Date().getFullYear())</script> Xiaoxi Pan</p>
   </div>
 </body>
 </html>
