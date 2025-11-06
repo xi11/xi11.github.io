@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://xi11.github.io/sitemap.xml
