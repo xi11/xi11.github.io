@@ -19,6 +19,23 @@
       --leftw:250px;
     }
 
+    .social-icons {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 8px;
+      font-size: 20px;
+    }
+    
+    .social-icons a {
+      color: var(--link);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    
+    .social-icons a:hover {
+      color: #0056b3; /* darker blue on hover */
+    }
+
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
     body {margin: 0;color: var(--ink);background: #fff;font: 16px/1.7 Arial, Helvetica, sans-serif;}
@@ -109,7 +126,6 @@
         </p>
 
         <div class="block">
-          <div class="label">Links:</div>
           <div class="social-icons">
             <a href="https://github.com/xi11" target="_blank" rel="noopener" title="GitHub">
               <i class="fab fa-github"></i>
@@ -219,6 +235,7 @@
   </div>
 </body>
 </html>
+
 
 
 
