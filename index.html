@@ -13,8 +13,8 @@
       --muted:#666;
       --link:#1772d0;
       --line:#e5e5e5;
-      --maxw:1100px;
-      --leftw:260px;
+      --maxw:1200px;
+      --leftw:220px;
     }
 
     *{box-sizing:border-box}
@@ -23,7 +23,7 @@
     a{color:var(--link);text-decoration:none}
     a:hover{text-decoration:underline}
     img{max-width:100%;height:auto;display:block}
-    .container{max-width:var(--maxw);margin:0 auto;padding:0 6px}
+    .container{max-width:var(--maxw);margin:0 auto;padding:0 4px}
 
     /* ===== Full-bleed split banners: half + half ===== */
     .banner-top,
@@ -67,7 +67,7 @@
     .left{padding-top:6px}
     .name{font-size:24px;font-weight:bold;margin:6px 0 4px}
     .affil{color:var(--muted);margin:0 0 10px}
-    .photo{width:240px;height:auto;border:1px solid var(--line)}
+    .photo{width:180px;height:auto;border:1px solid var(--line)}
     .left a{word-break:break-word}
     .left .line{border-top:1px solid var(--line);margin:12px 0}
     .left .block{margin:10px 0}
@@ -85,7 +85,7 @@
     .foot{color:var(--muted);font-size:13px;margin-top:8px}
 
     /* Optional: on very short screens, reduce banner heights a bit */
-    @media (max-height:700px){
+    @media (max-height:200px){
       .banner-top,.banner-bottom{height:20vh}
     }
   </style>
@@ -211,6 +211,7 @@
   </div>
 </body>
 </html>
+
 
 
 
